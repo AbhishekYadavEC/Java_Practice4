@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:ctx="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-2.5.xsd
+">
+
+
+    <bean id="custumPropertyEditor" class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+        <property name="customEditors">
+            <map>
+                <entry key="java.time.LocalDate" value="services.DOBPropertyEditor"/>
+            </map>
+        </property>
+    </bean>
+<!--    Spring Day-1-->
+   <!-- <bean id="customerBean" class="model.Customer">
+        <property name="customerId" value="101"></property>
+        <property name="customerName" value="Abhishek"></property>
+        <property name="monthlyIncome" value="20000"></property>
+        <property name="profession" value="Software Engineer"></property>
+        <property name="designation" value="ASE"></property>
+        <property name="companyName" value="Nucleus"></property>
+    </bean>-->
+
+    <!--<bean id="customerBean1" class="model.Customer">
+        <constructor-arg index="0" value="101" type="int"/>
+        <constructor-arg index="1" value="Abhsihek" type="String"/>
+        <constructor-arg index="2" value="30000" type="double"/>
+        <constructor-arg index="3" value="Software Engineer" type="String"/>
+        <constructor-arg index="4" value="ASE" type="String"/>
+        <constructor-arg index="5" value="Nucleus" type="String"/>
+    </bean>-->
+
+<!--    <bean id="myDemo1" class="model.DemoCode"/>-->
+<!--    <bean id="myDemo1" class="model.DemoCode" scope="prototype"/>-->
+
+    <!--<bean id="mainUser" class="model.User">
+        <property name="name" value="Abhi"></property>
+        <property name="userId" value="16915"></property>
+        <property name="address" value="Noida"></property>
+        <property name="emailAddress" value="abc@gmail.com"></property>
+        <property name="phoneNumbers" value="374580989"></property>
+    </bean>-->
+
+    <!--<bean id="mainUser" class="model.User">
+        <constructor-arg value="Abhishek"/>
+        <constructor-arg value="16915"/>
+        <constructor-arg value="Noida"/>
+        <constructor-arg>
+        <set>
+            <value>abc@gmail.com</value>
+            <value>bcae@gmail.com</value>
+            <value>adew@gmail.com</value>
+        </set>
+        </constructor-arg>
+        <constructor-arg>
+        <list>
+            <value>875423875</value>
+            <value>902327498</value>
+            <value>234539206</value>
+        </list>
+        </constructor-arg>
+    </bean>-->
+
+    <!--Spring Day2 Qns1 And Qns6-->
+    <!--<bean id="springDay2" class="model.SpringD2Qns1">
+        <property name="phoneNumber">
+            <list>
+                <value>+91827459842</value>
+                <value>+91728947240</value>
+                <value>+9162874823948</value>
+                <value>+912934762374</value>
+                <value>+9164234789889</value>
+            </list>
+        </property>
+        <property name="emailAddress">
+            <set>
+                <value>abd@gmail.com</value>
+                <value>hsjhg@gmail.com</value>
+                <value>hjfds@gmail.com</value>
+            </set>
+        </property>
+    </bean>-->
+
+<!--    Qns-2,3,4,5-->
+    <ctx:annotation-config/>
+    <!--<bean id="myCustomer" class="model.Customers">
+        <property name="address" ref="address1"></property>
+        <property name="loanAgreementDtls" ref="loanDtls"></property>
+        <property name="customerId" value="101"></property>
+        <property name="customerName" value="Abhishek"></property>
+        <property name="monthlyIncome" value="20000"></property>
+        <property name="profession" value="Software Engineer"></property>
+        <property name="designation" value="ASE"></property>
+        <property name="companyName" value="Nucleus"></property>
+        <property name="dateOfBirth" value="2001-06-15"></property>
+    </bean>
+    <bean id="address1" class="model.Address">
+        <property name="addressId" value="120"></property>
+        <property name="addressLine1" value="Noida"></property>
+        <property name="addressLine2" value="NewDelhi"></property>
+        <property name="city" value="Delhi"></property>
+    </bean>
+    <bean id="loanDtls" class="org.example.LoanAgreement">
+        <property name="loanAgreementId" value="108"></property>
+        <property name="loanAmount" value="70000"></property>
+    </bean>-->
+
+
+
+    <bean name="calc" class="drivers.aspect1.model1.BeanCalculator">
+    </bean>
+
+
+
+</beans>

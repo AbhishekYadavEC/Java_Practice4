@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:ctx="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-2.5.xsd
+">
+
+    <!--Type primitive Data Type- Create multiple objetc in xml file and inject it-->
+    <!--<bean class="model.User" name="user1">
+        <property name="name" value="Abhishek">
+        </property>
+        <property name="userId" value="1212">
+        </property>
+
+    </bean>
+
+    <bean class="model.User" name="user2">
+        <property name="name" value="Yadav">
+        </property>
+        <property name="userId" value="129238">
+        </property>
+        <property name="address" value="Noida"></property>
+        <property name="emailAddress">
+            <set>
+                <value>abcjwv@gmail.com</value>
+                <value>abcjgv@gmail.com</value>
+                <value>abcjcv@gmail.com</value>
+                <value>abcjxv@gmail.com</value>
+            </set>
+        </property>
+        <property name="phoneNumbers">
+            <list>
+                <value>764884428788</value>
+                <value>764884428788</value>
+                <value>764884428788</value>
+                <value>764884428788</value>
+            </list>
+        </property>
+    </bean>-->
+<!--    take value from Constructor method-->
+    <bean class="model.User" name="LifeCycle" init-method="init" destroy-method="destroy">
+        <property name="name" value="Abhi YadA"/>
+        <property name="userId" value="16915"/>
+    </bean>
+
+    <bean class="model.Address" name="LifeCycle1">
+
+    </bean>
+</beans>
